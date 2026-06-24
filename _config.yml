@@ -3,3 +3,12 @@ theme: lime-theme
 
 # Optional: Add any layout specific configurations required by the theme
 
+# Load the theme directly from GitHub
+remote_theme: just-the-docs/just-the-docs
+
+# Active the green color theme variant
+color_scheme: green
+
+# Required plugins
+plugins:
+  - jekyll-remote-theme

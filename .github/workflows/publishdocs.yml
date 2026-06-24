@@ -2,7 +2,7 @@ name: Publish docs to Github Pages with Jekyll
 
 on:
   push:
-    branches: ["main"] # Change to your default branch
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -23,14 +23,13 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2' # Standard stable Ruby version
-          bundler-cache: true # Caches dependencies for fast builds
+          ruby-version: '3.2'
+          bundler-cache: true
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
-        # This builds your Markdown files into HTML using the Lime theme configurations
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
