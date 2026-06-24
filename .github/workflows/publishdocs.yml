@@ -30,7 +30,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --clean
         env:
           JEKYLL_ENV: production
 
